@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
         </div>
 
         <div className="sub-navigation">
-          <h1>All</h1>
+          <h1 className="activated">All</h1>
           <h1>Movies</h1>
           <h1>Series</h1>
         </div>

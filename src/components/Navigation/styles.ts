@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
 
   div.navigation {
-    height: 100px;
+    height: 120px;
 
     display: flex;
     flex-direction: column;
@@ -17,6 +17,8 @@ export const Container = styled.div`
   div.title {
     display: flex;
     align-items: center;
+
+    font-size: 20px;
   }
 
   div.sub-navigation {
@@ -24,6 +26,15 @@ export const Container = styled.div`
 
     h1 {
       margin-right: 32px;
+      padding-bottom: 6px;
+      color: ${props => props.theme.colors.textSecundary};
+
+      cursor: pointer;
+    }
+
+    h1.activated {
+      color: ${props => props.theme.colors.textPrimary};
+      border-bottom: 8px solid ${props => props.theme.colors.textPrimary};
     }
   }
 `;
