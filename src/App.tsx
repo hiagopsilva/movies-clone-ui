@@ -4,6 +4,7 @@ import light from './styles/themes/light';
 
 import GlobalStyles from './styles/global';
 import Main from './components/Main';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <div className="App">
         <GlobalStyles />
         <Main />
+        <div className="content">
+          <Navigation />
+        </div>
       </div>
     </ThemeProvider>
   );
