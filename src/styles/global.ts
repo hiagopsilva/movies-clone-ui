@@ -16,5 +16,14 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.textPrimary};
     font-family: Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+
+    div.App {
+      display: flex;
+    }
+
+    div.App div.content {
+      padding: 32px;
+      flex: 1;
+    }
   }
 `;
