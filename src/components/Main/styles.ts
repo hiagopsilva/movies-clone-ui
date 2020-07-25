@@ -21,6 +21,7 @@ export const Container = styled.div`
 
     h1.name {
       font-size: 28px;
+      color: ${props => props.theme.colors.textPrimary};
     }
 
     h1.email {

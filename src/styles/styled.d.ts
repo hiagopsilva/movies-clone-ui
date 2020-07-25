@@ -9,6 +9,8 @@ declare module 'styled-components' {
       secundary: string;
 
       background: string;
+      offColorSwitch: string;
+      onColorSwitch: string;
 
       textPrimary: string;
       textSecundary: string;

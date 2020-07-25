@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Switch from 'react-switch';
+import { ThemeContext } from 'styled-components';
+
 import { Container } from './styles';
 
-const Navigation: React.FC = () => {
+interface Props {
+  toogleTheme(): void;
+}
+
+const Navigation: React.FC<Props> = ({ toogleTheme }) => {
+  const { colors, title } = useContext(ThemeContext);
   return (
     <Container>
       <div className="navigation">
@@ -18,12 +25,12 @@ const Navigation: React.FC = () => {
       </div>
 
       <Switch
-        onChange={() => {}}
-        checked
+        onChange={toogleTheme}
+        checked={title === 'light'}
         checkedIcon={false}
         uncheckedIcon={false}
-        // offColor={shade(0.1, colors.primary)}
-        // onColor={colors.secundary}
+        offColor={colors.offColorSwitch}
+        onColor={colors.onColorSwitch}
       />
     </Container>
   );
