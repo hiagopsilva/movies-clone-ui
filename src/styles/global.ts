@@ -22,7 +22,7 @@ export default createGlobalStyle`
     }
 
     div.App div.content {
-      padding: 32px;
+      padding: 32px 32px 0px;
       flex: 1;
     }
   }
