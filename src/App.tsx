@@ -5,6 +5,7 @@ import light from './styles/themes/light';
 import GlobalStyles from './styles/global';
 import Main from './components/Main';
 import Navigation from './components/Navigation';
+import Movies from './components/Movies';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Main />
         <div className="content">
           <Navigation />
+
+          <Movies />
         </div>
       </div>
     </ThemeProvider>

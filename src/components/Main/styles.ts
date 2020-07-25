@@ -41,8 +41,6 @@ export const Container = styled.div`
     h1 {
       font-size: 24px;
       cursor: pointer;
-
-      transition: font-size 0.2s linear 0.1s;
     }
 
     h1.activated {
@@ -52,6 +50,10 @@ export const Container = styled.div`
     h1:hover {
       color: ${props => props.theme.colors.textPrimary};
       font-size: 32px;
+
+      -webkit-transform: scale(0.8);
+      transform: scale(1.1);
+      transition: 0.5s;
     }
   }
 
@@ -64,13 +66,13 @@ export const Container = styled.div`
       width: 38px;
       height: 38px;
 
-      transition: width 0.2s linear 0.1s, height 0.2s linear 0.1s;
       cursor: pointer;
     }
 
     img:hover {
-      width: 48px;
-      height: 48px;
+      -webkit-transform: scale(1.4);
+      transform: scale(1.4);
+      transition: 0.5s;
     }
   }
 `;
