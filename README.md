@@ -8,9 +8,9 @@
 ## Demo
 
 <h4>Light Theme</h4>
-<img src="./src/assets/result/light-theme.png" alt="light-theme">
+![light-theme](https://user-images.githubusercontent.com/47197695/88754365-ddeca700-d134-11ea-81bc-115ac9bd91fa.PNG)
 <h4>Dark Theme</h4>
-<img src="./src/assets/result/dark-theme.png" alt="dark-theme">
+![dark-theme](https://user-images.githubusercontent.com/47197695/88754390-e9d86900-d134-11ea-9fa9-b0b507a7bf8e.PNG)
 
 ## Install
 
@@ -34,9 +34,9 @@ yarn start
 
 ## Layout
 
-<h4>Você pode visualizar o layout desse projeto no figma através
+>Você pode visualizar o layout desse projeto no figma através
 <a href="https://www.figma.com/file/KFtOvaZqXlNjp6Xh1Uo4gg/Movies-ui?node-id=0%3A1" target="_blank"> desse link.</a>
-</h4>
+
 
 ## Show your support
 
