@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type PropType = {
+  active?: boolean | undefined;
+};
+
 export const Container = styled.div`
   display: flex;
 
@@ -34,7 +38,27 @@ export const Container = styled.div`
 
     h1.activated {
       color: ${props => props.theme.colors.textPrimary};
-      border-bottom: 8px solid ${props => props.theme.colors.textPrimary};
     }
   }
+`;
+
+export const Menu = styled.div`
+  display: flex;
+`;
+export const Item = styled.h1.attrs((props: PropType) => ({
+  active: props.active,
+}))`
+  margin-right: 32px;
+  padding-bottom: 6px;
+  color: ${props =>
+    props.active === true
+      ? props.theme.colors.textPrimary
+      : props.theme.colors.textSecundary};
+
+  border-bottom: ${props =>
+    props.active === true
+      ? `8px solid ${props.theme.colors.textPrimary}`
+      : 'none'};
+
+  cursor: pointer;
 `;

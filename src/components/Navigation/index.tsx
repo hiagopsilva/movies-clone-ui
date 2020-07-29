@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 
-import { Container } from './styles';
+import { Container, Menu, Item } from './styles';
 
 interface Props {
   toogleTheme(): void;
@@ -10,18 +10,32 @@ interface Props {
 
 const Navigation: React.FC<Props> = ({ toogleTheme }) => {
   const { colors, title } = useContext(ThemeContext);
+  const [menu, setMenu] = useState({
+    active: 'All',
+    items: ['All', 'Movies', 'Series'],
+  });
+
+  const handleMenu = (name: string) => {
+    setMenu({ ...menu, active: name });
+  };
+
   return (
     <Container>
       <div className="navigation">
         <div className="title">
           <h1>Action</h1>
         </div>
-
-        <div className="sub-navigation">
-          <h1 className="activated">All</h1>
-          <h1>Movies</h1>
-          <h1>Series</h1>
-        </div>
+        <Menu>
+          {menu.items.map(item => (
+            <Item
+              onClick={() => handleMenu(item)}
+              key={item}
+              active={menu.active === item}
+            >
+              {item}
+            </Item>
+          ))}
+        </Menu>
       </div>
 
       <Switch
