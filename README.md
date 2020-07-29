@@ -8,9 +8,9 @@
 ## Demo
 
 <h4>Light Theme</h4>
-![light-theme](https://user-images.githubusercontent.com/47197695/88754365-ddeca700-d134-11ea-81bc-115ac9bd91fa.PNG)
+<img src="https://user-images.githubusercontent.com/47197695/88754365-ddeca700-d134-11ea-81bc-115ac9bd91fa.PNG" alt="light theme" />
 <h4>Dark Theme</h4>
-![dark-theme](https://user-images.githubusercontent.com/47197695/88754390-e9d86900-d134-11ea-9fa9-b0b507a7bf8e.PNG)
+<img src="https://user-images.githubusercontent.com/47197695/88754390-e9d86900-d134-11ea-9fa9-b0b507a7bf8e.PNG" alt="dark theme" />
 
 ## Install
 
