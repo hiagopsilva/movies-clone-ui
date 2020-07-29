@@ -12,7 +12,7 @@ import InstagramDark from '../../assets/icons-dark-theme/instagram.svg';
 import LinkedinDark from '../../assets/icons-dark-theme/linkedin.svg';
 import GithubDark from '../../assets/icons-dark-theme/github.svg';
 
-import { Container, Menu, Item } from './styles';
+import { Container, Header, Menu, Item, Footer } from './styles';
 
 const Main: React.FC = () => {
   const { title } = useContext(ThemeContext);
@@ -27,11 +27,11 @@ const Main: React.FC = () => {
 
   return (
     <Container>
-      <header>
+      <Header>
         <img src={avatar} alt="avatar" />
         <h1 className="name">Sabrina Santos</h1>
         <h1 className="email">sabrinasantos@gmail.com</h1>
-      </header>
+      </Header>
 
       <Menu>
         {menu.items.map(item => (
@@ -46,7 +46,7 @@ const Main: React.FC = () => {
       </Menu>
 
       {title === 'light' ? (
-        <footer>
+        <Footer>
           <a
             href="https://github.com/hiagopsilva"
             target="_blank"
@@ -75,9 +75,9 @@ const Main: React.FC = () => {
           >
             <img src={GithubLight} alt="icon" />
           </a>
-        </footer>
+        </Footer>
       ) : (
-        <footer>
+        <Footer>
           <a
             href="https://github.com/hiagopsilva"
             target="_blank"
@@ -109,7 +109,7 @@ const Main: React.FC = () => {
           >
             <img src={GithubDark} alt="icon" />
           </a>
-        </footer>
+        </Footer>
       )}
     </Container>
   );
