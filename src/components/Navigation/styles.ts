@@ -29,6 +29,7 @@ export const NavigationContainer = styled.div`
 export const Menu = styled.div`
   display: flex;
 `;
+
 export const Item = styled.h1.attrs((props: PropType) => ({
   active: props.active,
 }))`
