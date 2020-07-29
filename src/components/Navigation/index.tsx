@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 
-import { Container, Menu, Item } from './styles';
+import { Container, NavigationContainer, Menu, Item } from './styles';
 
 interface Props {
   toogleTheme(): void;
@@ -21,10 +21,11 @@ const Navigation: React.FC<Props> = ({ toogleTheme }) => {
 
   return (
     <Container>
-      <div className="navigation">
+      <NavigationContainer>
         <div className="title">
           <h1>Action</h1>
         </div>
+
         <Menu>
           {menu.items.map(item => (
             <Item
@@ -36,7 +37,7 @@ const Navigation: React.FC<Props> = ({ toogleTheme }) => {
             </Item>
           ))}
         </Menu>
-      </div>
+      </NavigationContainer>
 
       <Switch
         onChange={toogleTheme}
