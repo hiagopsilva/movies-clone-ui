@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
 import avatar from '../../assets/avatar.jpg';
@@ -12,10 +12,18 @@ import InstagramDark from '../../assets/icons-dark-theme/instagram.svg';
 import LinkedinDark from '../../assets/icons-dark-theme/linkedin.svg';
 import GithubDark from '../../assets/icons-dark-theme/github.svg';
 
-import { Container } from './styles';
+import { Container, Menu, Item } from './styles';
 
 const Main: React.FC = () => {
   const { title } = useContext(ThemeContext);
+  const [menu, setMenu] = useState({
+    active: 'Action',
+    items: ['Action', 'Comedy', 'Animated Movies', 'Drama', 'Horror'],
+  });
+
+  const handleMenu = (name: string) => {
+    setMenu({ ...menu, active: name });
+  };
 
   return (
     <Container>
@@ -24,27 +32,83 @@ const Main: React.FC = () => {
         <h1 className="name">Sabrina Santos</h1>
         <h1 className="email">sabrinasantos@gmail.com</h1>
       </header>
-      <div>
-        <h1 className="activated">Action</h1>
-        <h1>Comedy</h1>
-        <h1>Animated Movies</h1>
-        <h1>Drama</h1>
-        <h1>Horror</h1>
-      </div>
+
+      <Menu>
+        {menu.items.map(item => (
+          <Item
+            onClick={() => handleMenu(item)}
+            key={item}
+            active={menu.active === item}
+          >
+            {item}
+          </Item>
+        ))}
+      </Menu>
 
       {title === 'light' ? (
         <footer>
-          <img src={FacebookLight} alt="icon" />
-          <img src={InstagramLight} alt="icon" />
-          <img src={LinkedinLight} alt="icon" />
-          <img src={GithubLight} alt="icon" />
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={FacebookLight} alt="icon" />
+          </a>
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={InstagramLight} alt="icon" />
+          </a>
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={LinkedinLight} alt="icon" />
+          </a>
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={GithubLight} alt="icon" />
+          </a>
         </footer>
       ) : (
         <footer>
-          <img src={FacebookDark} alt="icon" />
-          <img src={InstagramDark} alt="icon" />
-          <img src={LinkedinDark} alt="icon" />
-          <img src={GithubDark} alt="icon" />
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={FacebookDark} alt="icon" />
+          </a>
+
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={InstagramDark} alt="icon" />
+          </a>
+
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={LinkedinDark} alt="icon" />
+          </a>
+
+          <a
+            href="https://github.com/hiagopsilva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={GithubDark} alt="icon" />
+          </a>
         </footer>
       )}
     </Container>

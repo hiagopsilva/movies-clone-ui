@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type PropType = {
+  active?: boolean | undefined;
+};
+
 export const Container = styled.div`
   height: 100vh;
   width: 380px;
@@ -31,30 +35,9 @@ export const Container = styled.div`
   }
 
   div {
-    padding: 32px 32px 90px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex: 1;
-
-    color: ${props => props.theme.colors.textSecundary};
-
     h1 {
       font-size: 24px;
       cursor: pointer;
-    }
-
-    h1.activated {
-      color: ${props => props.theme.colors.textPrimary};
-    }
-
-    h1:hover {
-      color: ${props => props.theme.colors.textPrimary};
-      font-size: 32px;
-
-      -webkit-transform: scale(0.8);
-      transform: scale(1.1);
-      transition: 0.5s;
     }
   }
 
@@ -76,4 +59,36 @@ export const Container = styled.div`
       transition: 0.5s;
     }
   }
+`;
+
+export const Menu = styled.div`
+  padding: 32px 32px 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+
+  color: ${props => props.theme.colors.textSecundary};
+`;
+
+export const Item = styled.h1.attrs((props: PropType) => ({
+  active: props.active,
+}))`
+  margin-right: 32px;
+  padding-bottom: 6px;
+  color: ${props =>
+    props.active === true
+      ? props.theme.colors.textPrimary
+      : props.theme.colors.textSecundary};
+
+  &:hover {
+    color: ${props => props.theme.colors.textPrimary};
+    font-size: 32px;
+
+    -webkit-transform: scale(0.8);
+    transform: scale(1);
+    transition: 0.5s;
+  }
+
+  cursor: pointer;
 `;
