@@ -17,37 +17,37 @@ const Movies: React.FC = () => {
     <Container>
       <div className="row">
         <div>
-          <img src={Image1} alt="movie" />
+          <img src={Image1} alt="movie1" />
         </div>
         <div>
-          <img src={Image2} alt="movie" />
+          <img src={Image2} alt="movie2" />
         </div>
         <div>
-          <img src={Image3} alt="movie" />
-        </div>
-      </div>
-
-      <div className="row">
-        <div>
-          <img src={Image4} alt="movie" />
-        </div>
-        <div>
-          <img src={Image5} alt="movie" />
-        </div>
-        <div>
-          <img src={Image6} alt="movie" />
+          <img src={Image3} alt="movie3" />
         </div>
       </div>
 
       <div className="row">
         <div>
-          <img src={Image7} alt="movie" />
+          <img src={Image4} alt="movie4" />
         </div>
         <div>
-          <img src={Image8} alt="movie" />
+          <img src={Image5} alt="movie5" />
         </div>
         <div>
-          <img src={Image9} alt="movie" />
+          <img src={Image6} alt="movie6" />
+        </div>
+      </div>
+
+      <div className="row">
+        <div>
+          <img src={Image7} alt="movie7" />
+        </div>
+        <div>
+          <img src={Image8} alt="movie8" />
+        </div>
+        <div>
+          <img src={Image9} alt="movie9" />
         </div>
       </div>
     </Container>
